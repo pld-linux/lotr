@@ -1,16 +1,17 @@
 #
-# NOTE: This is only game engine! If you want to play lotr you need to obtain
-the Original Interplays Lord of the Rings game data.
+# NOTE: This is only game engine! If you want to play lotr you 
+# 	need to obtain the Original Interplays Lord of the Rings 
+#	game data.
 #
 Summary:	Linux engine for Interplays Lord of the Rings
 Summary(pl.UTF-8):	Linukoswy silnik dla gry Władca Pierścieni stworzonej przez Interplays
 Name:		lotr
-Version:	0.6.4
+Version:	0.6.5
 Release:	1
 License:	LGPL v2.1+
 Group:		Applications/Games
 Source0:	http://download.wonderland.cz/%{name}-%{version}.tgz
-# Source0-md5:	642dcb09bc92dbcb3272850e2210645b
+# Source0-md5:	762f7e6954f99612124ae2fbc74841de
 Patch0:		%{name}-ldflags.patch
 URL:		http://www.wonderland.cz/lotr/
 BuildRequires:	SDL_mixer-devel
