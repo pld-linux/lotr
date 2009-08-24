@@ -1,0 +1,25 @@
+--- lotr-0.6.4/Makefile~	2009-02-22 10:13:42.000000000 +0100
++++ lotr-0.6.4/Makefile	2009-08-21 16:19:40.000000000 +0200
+@@ -77,18 +77,18 @@
+ 
+ 
+ lotr: $(OBJFILES) lotr.o
+-	$(LD) $(OBJFILES) $(LIBRARIES) lotr.o -o lotr
++	$(LD) $(LDFLAGS) $(OBJFILES) lotr.o -o lotr $(LIBRARIES)
+ 
+ lotr.static: $(OBJFILES) lotr.o
+-	$(LD_STATIC) $(OBJFILES) $(STATIC_LIBRARIES) lotr.o -o lotr.static
++	$(LD_STATIC) $(LDFLAGS) $(OBJFILES) lotr.o -o lotr.static $(STATIC_LIBRARIES)
+ 
+ 
+ playcartoon: $(PLAYCARTOONOBJ) playcartoon.o
+-	$(LD) $(PLAYCARTOONOBJ) $(LIBRARIES) playcartoon.o -o playcartoon
++	$(LD) $(LDFLAGS) $(PLAYCARTOONOBJ) playcartoon.o -o playcartoon $(LIBRARIES)
+ 
+ 
+ playav: $(PLAYAVOBJ) playav.o
+-	$(LD) $(PLAYAVOBJ) $(LIBRARIES) playav.o -o playav
++	$(LD) $(LIBRARIES) $(PLAYAVOBJ) playav.o -o playav $(LIBRARIES)
+ 
+ 
+ 
